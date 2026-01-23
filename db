@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Hello From DB";
+ls -al $1;
+
+cd $1;
+
+echo ` pwd `;
