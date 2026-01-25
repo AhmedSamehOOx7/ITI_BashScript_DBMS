@@ -80,7 +80,6 @@ function main {
       ;;
     *) 
       echo "Invalid option";
-      break;
       ;;
   esac
 }

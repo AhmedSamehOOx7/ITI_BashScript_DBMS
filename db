@@ -1,8 +1,41 @@
 #!/bin/bash
 
-echo "Hello From DB";
-ls -al $1;
-
 cd $1;
+cur_db_name=$1;
 
-echo ` pwd `;
+# Main DB Menu
+function dbMenu {
+  option=` zenity --list --title="Welcome to $cur_db_name DB, Please select an option to start" --column="Options" "Create Table" "List Tables" "Drop Table" "Insert in Table" "Select from Table" "Delete from Table" "Update Table" "Exit" `;
+
+  case $option in
+    "Create Table")
+      exit 0;
+      ;;
+    "List Tables")
+      exit 0;
+      ;;
+    "Drop Table")
+      exit 0;
+      ;;
+    "Insert in Table")
+      exit 0;
+      ;;
+    "Select from Table")
+      exit 0;
+      ;;
+    "Delete from Table")
+      exit 0;
+      ;;
+    "Update Table")
+      exit 0;
+      ;;
+    "Exit")
+      exit 0;
+      ;;
+    *) 
+      echo "Invalid option";
+      ;;
+  esac
+}
+
+dbMenu;
